@@ -1,0 +1,49 @@
+.process-steps{
+    $circle-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 190px;
+    @include media-breakpoint-up(md){
+        width: 100%;
+    }    
+    .step-circle {
+        height: $circle-size;
+        width: $circle-size;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+        border: 1px solid theme-color('secondary');
+        border-radius: $circle-size;
+        font-size: $circle-size * 1.25;
+        background-color: theme-color('primary');
+        color: theme-color('primary');
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: theme-color('primary');
+    }
+
+    &.process-steps-light {
+        border-color: theme-color('secondary');
+        &:after {
+          background-color: theme-color('secondary');
+        }
+        .step-circle {
+          border-color: theme-color('secondary');
+          font-size: $circle-size - 6;
+          color: theme-color('secondary');
+        }
+        .step-circle.completed {
+            font-size: $circle-size * 1.25;
+        }
+      
+    }
+}
