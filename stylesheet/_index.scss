@@ -59,6 +59,8 @@
 .intro{
     .intro-container{
         background-color: theme-color('secondary');
+        margin-left: 0px;
+        margin-right: 0px;
         padding-left: 30px;
         padding-right: 30px;
         @include media-breakpoint-up(md){
@@ -68,8 +70,14 @@
     }
     .intro-image {
         min-height: 250px;
-        margin-left: -30px;
-        margin-right: -30px;
+        margin-left: -45px;
+        margin-right: -45px;
+        @include media-breakpoint-up(md){
+            margin-left: -30px;
+            margin-right: -30px;
+            padding-left: 42px;
+            padding-right: 42px;
+        }
     }
     .intro-content {
         max-height: 420px;
